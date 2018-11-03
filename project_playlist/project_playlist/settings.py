@@ -1,4 +1,3 @@
-
 """
 Django settings for project_playlist project.
 
@@ -39,9 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'project_playlist',
-    'django_extensions',
-    'rest_framework.authtoken',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -123,19 +119,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        #'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 2,
-    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LargeResultsSetPagination',
-     # 'DEFAULT_PAGINATION_CLASS': 'project_playlist.apps.core.pagination.StandardResultsSetPagination'
-
-}
